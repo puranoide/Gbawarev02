@@ -1,43 +1,32 @@
 <?php
-$to = "acostasanchezangelgabriel@gmail.com";
-$subject = "Correo con archivo adjunto";
-$message = "Hola,\n\nTe envío un archivo adjunto.";
+// Lista de números en formato internacional
+$numeros = [
+    "51987654321", // Perú
+    "51939152728" // Colombia
+];
 
-// Ruta del archivo que quieres adjuntar
-$file = "documentodeprueba.pdf";
-$file_size = filesize($file);
-$handle = fopen($file, "r");
-$content = fread($handle, $file_size);
-fclose($handle);
+// URL del PDF que quieres enviar
+$pdfUrl = "https://gabware.com/documentodeprueba.pdf";
 
-// Codificamos el archivo en base64
-$content = chunk_split(base64_encode($content));
+// API de UltraMsg (ejemplo, puedes usar Twilio u otra)
+$token = "burj8xfiylspnte6";
+$instanceId = "instance143337";
 
-// Generamos un boundary (separador de partes del correo)
-$separator = md5(time());
+foreach ($numeros as $numero) {
+    $data = [
+        "token" => $token,
+        "to" => $numero,
+        "document" => $pdfUrl,
+        "filename" => "informe.pdf"
+    ];
 
-// Encabezados
-$headers = "From: prueba@gabware.com\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"";
+    $ch = curl_init("https://api.ultramsg.com/$instanceId/messages/document");
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-// Cuerpo del mensaje (texto + adjunto)
-$body = "--" . $separator . "\r\n";
-$body .= "Content-Type: text/plain; charset=\"utf-8\"\r\n";
-$body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-$body .= $message . "\r\n";
+    $response = curl_exec($ch);
+    curl_close($ch);
 
-// Adjuntar archivo
-$body .= "--" . $separator . "\r\n";
-$body .= "Content-Type: application/octet-stream; name=\"" . basename($file) . "\"\r\n";
-$body .= "Content-Transfer-Encoding: base64\r\n";
-$body .= "Content-Disposition: attachment; filename=\"" . basename($file) . "\"\r\n\r\n";
-$body .= $content . "\r\n";
-$body .= "--" . $separator . "--";
-
-// Enviar correo
-if (mail($to, $subject, $body, $headers)) {
-    echo "Correo enviado con éxito.";
-} else {
-    echo "Error al enviar el correo.";
+    echo "Respuesta para $numero: $response\n";
 }
