@@ -1,5 +1,5 @@
 <?php
-// Lista de números (con el formato correcto: sin espacios, en internacional con + o 51...)
+// Lista de números en formato internacional (sin espacios, sin símbolos raros)
 $numeros = [
     "51902252350", 
     "51987654321", 
@@ -10,36 +10,29 @@ $numeros = [
 $token = "burj8xfiylspnte6";
 $instanceId = "instance143337";
 
-// Mensaje a enviar
-$mensaje = "La API de WhatsApp en UltraMsg.com funciona bien";
+// PDF a enviar (debe ser accesible públicamente por URL)
+$pdfUrl = "https://gabware.com/documentodeprueba.pdf";
+$nombreArchivo = "documento_prueba.pdf";
 
 foreach ($numeros as $numero) {
-    $params = [
-        'token' => $token,
-        'to' => $numero, // puedes usar con +51 o sin +, UltraMsg acepta ambos
-        'body' => $mensaje
+    $data = [
+        "to" => $numero,
+        "document" => $pdfUrl,
+        "filename" => $nombreArchivo
     ];
 
-    $curl = curl_init();
-    curl_setopt_array($curl, [
-        CURLOPT_URL => "https://api.ultramsg.com/$instanceId/messages/chat",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_SSL_VERIFYHOST => 0,
-        CURLOPT_SSL_VERIFYPEER => 0,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => http_build_query($params),
-        CURLOPT_HTTPHEADER => [
-            "content-type: application/x-www-form-urlencoded"
-        ],
-    ]);
+    $url = "https://api.ultramsg.com/$instanceId/messages/document?token=$token";
 
-    $response = curl_exec($curl);
-    $err = curl_error($curl);
-    curl_close($curl);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+    $response = curl_exec($ch);
+    $err = curl_error($ch);
+    curl_close($ch);
 
     if ($err) {
         echo "Error para $numero: $err\n";
