@@ -4,7 +4,7 @@ $subject = "Correo con archivo adjunto";
 $message = "Hola,\n\nTe envío un archivo adjunto.";
 
 // Ruta del archivo que quieres adjuntar
-$file = "enviocorreos.php";
+$file = "documentodeprueba.pdf";
 $file_size = filesize($file);
 $handle = fopen($file, "r");
 $content = fread($handle, $file_size);
