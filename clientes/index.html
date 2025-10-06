@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabware - Consultoría y Software Empresarial</title>
+    <link rel="shortcut icon" href="../assets/img/iconwebgabware.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/clientes.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Gabware</a>
+            <ul class="nav-links">
+                <li><a href="../">Inicio</a></li>
+                <li><a href="../index.html#servicios">Servicios</a></li>
+                <li><a href="../index.html#productos">Productos</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+            <a href="#contacto" class="cta-header">Consulta Gratis</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Nuestros Clientes</h1>
+                <p>Empresas que confían en nuestras soluciones tecnológicas</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="industry">Industria</label>
+                        <select id="industry">
+                            <option value="">Todas las industrias</option>
+                            <option value="inmobiliaria">Inmobiliaria</option>
+                            <option value="retail">Retail</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="country">País</label>
+                        <select id="country">
+                            <option value="">Todos los países</option>
+                            <option value="peru">Perú</option>
+                            <option value="chile">Chile</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="mexico">México</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="service">Servicio</label>
+                        <select id="service">
+                            <option value="">Todos los servicios</option>
+                            <option value="diseño web">Diseño web</option>
+                            <option value="desarrollo">Desarrollo de Software</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn-filter btn-primary" id="applyFilters">Aplicar Filtros</button>
+                    <button class="btn-filter btn-secondary" id="resetFilters">Limpiar Filtros</button>
+                </div>
+            </div>
+
+            <!-- Clients Grid -->
+            <div class="clients-grid" id="clientsGrid"></div>
+            <div class="no-results" id="noResults">
+                No se encontraron clientes con los filtros seleccionados
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para Digitalizar tu Empresa?</h2>
+            <p>Únete a más de 50 empresas que ya transformaron sus procesos con nuestras soluciones</p>
+            <a href="http://wa.me/51939152728" target="_blank" class="btn-primary">Consulta Gratuita</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gabware</h3>
+                    <p>Transformamos empresas a través de la tecnología, brindando soluciones innovadoras y consultoría
+                        especializada.</p>
+                    <p><strong>📧 contacto@gabware.com</strong></p>
+                    <p><strong>📞 +51 939152728</strong></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <a href="../index.html#servicios">Consultoría Empresarial</a>
+                    <a href="../index.html#servicios">Desarrollo de Software</a>
+                    <a href="../index.html#servicios">Migración a la Nube</a>
+                    <a href="../index.html#servicios">Ciberseguridad</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Productos</h3>
+                    <a href="../index.html#servicios">Plataforma Medica</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <a href="#">Acerca de Nosotros</a>
+                    <a href="#">Casos de Éxito</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gabware. Todos los derechos reservados. | Diseñado para el futuro empresarial.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="assets/js/clientes.js"></script>
+</body>
+
+</html>
