@@ -16,14 +16,6 @@ const clients = [
         description: "Diseñamos y desplegamos una landingpage personalizada para una empresa de inmobiliaria, mejorando la experiencia de los visitantes.",
         year: "2025",
         website: "https://gabware.com/Romath"
-    },{
-        name:"runge",
-        industry:"retail",
-        country:"chile",
-        service:"desarrollo",
-        description:"Desarrollamos un sistema integral de gestión de transportes que optimizó los procesos administrativos y mejoró la atención al cliente en un 90%,acompañado de una landingpage personalizada.",
-        year:"2023",
-        website:"http://runge-plataforme-chile.com/"
     }
 ];
 
