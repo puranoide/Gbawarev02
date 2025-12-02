@@ -4,40 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabware- Consultoría y Software Empresarial</title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Gabware - Transformación Digital & Software Custom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/iconwebgabware.png" type="image/x-icon">
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9852708779112112"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
     <div id="popupOverlay" class="overlay">
         <div class="popup">
             <button class="close-btn" id="closePopupBtn">&times;</button>
-            <h2>🎉 Oferta Especial</h2>
-            <p>Obtén un <strong>30% de descuento</strong> en un primera landingpage
-                ¡Aprovecha esta promoción limitada!</p>
+            <h2>🎉 Oferta Limitada</h2>
+            <p>Obtén un 30% de descuento en tu primera Landing Page profesional. ¡Impulsa tu presencia digital hoy!</p>
             <button class="promo-btn"
-                onclick="window.open('https://wa.me/p/31388951694052277/51939152728','_blank')">Aprovechar
+                onclick="window.open('https://wa.me/51939152728','_blank')">Aprovechar
                 Ahora</button>
         </div>
     </div>
-    <!-- Header -->
+    
     <header>
-        <nav class="container">
+        <nav class="container" id="nav-container">
             <a href="#" class="logo">Gabware</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="clientes/">Nuestros Clientes</a></li>
+                <li><a href="#productos">Plataformas</a></li>
+                <li><a href="clientes/">Clientes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <a href="#contacto" class="cta-header">Consulta Gratis</a>
-            <div class="menu-toggle">
+            <a href="#contacto" class="cta-header">Consulta Gratuita</a>
+            <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -45,135 +44,79 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="inicio">
-        <div class="container">
+        <div class="container fade-in">
             <div class="hero-content">
-                <h1>Transformamos tu Negocio con Tecnología</h1>
-                <p>Consultoría especializada y soluciones de software empresarial para llevar tu empresa al siguiente
-                    nivel.</p>
+                <h1>Desarrollo de Software<br> Transformación Digital Garantizada.</h1>
+                <p>Desarrollamos soluciones de software a medida y ofrecemos consultoría especializada para optimizar procesos y escalar tu negocio.</p>
                 <div class="hero-cta">
-                    <a href="#contacto" class="btn btn-primary">Empezar Ahora</a>
-                    <a href="#servicios" class="btn btn-secondary">Conocer Más</a>
+                    <a href="#contacto" class="btn btn-primary">Empezar un Proyecto</a>
+                    <a href="#servicios" class="btn btn-secondary">Explorar Servicios</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="servicios">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Nuestros Servicios</h2>
-                <p>Ofrecemos soluciones integrales para optimizar los procesos de tu empresa</p>
+                <h2>Servicios de Desarrollo</h2>
+                <p>Nuestra experiencia en tecnologías de vanguardia al servicio de la eficiencia empresarial.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-icon">💼</div>
-                    <h3>Consultoría Empresarial</h3>
-                    <p>Análisis completo de procesos y estrategias de optimización tecnológica personalizadas para tu
-                        negocio.</p>
+                    <div class="service-icon custom">🖥️</div>
+                    <h3>Desarrollo de Software a Medida</h3>
+                    <p>Aplicaciones web y móviles personalizadas (SaaS, ERP, CRM) construidas con arquitecturas modernas y escalables.</p>
+                    <a href="#contacto" class="btn btn-primary">Cotizar Proyecto</a>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon custom">☁️</div>
+                    <h3>Consultoría Cloud & DevOps</h3>
+                    <p>Estrategias de migración a la nube (AWS, Azure) e implementación de pipelines CI/CD para un despliegue rápido.</p>
                     <a href="#contacto" class="btn btn-primary">Consultar</a>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">⚙️</div>
-                    <h3>Desarrollo de Software</h3>
-                    <p>Creación de aplicaciones web y móviles a medida, adaptadas a las necesidades específicas de tu
-                        empresa.</p>
-                    <a href="#contacto" class="btn btn-primary">Solicitar</a>
+                    <div class="service-icon custom">🌐</div>
+                    <h3>Web y Landing Pages de Alto Rendimiento</h3>
+                    <p>Diseño enfocado en la conversión, SEO optimizado y experiencia de usuario impecable para tus campañas de marketing.</p>
+                    <a href="#contacto" class="btn btn-primary">Solicitar Diseño</a>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">🌎</div>
-                    <h3>Diseño y despliegue de tu landingpage</h3>
-                    <p> Diseño y desarrollo de landingpages personalizadas para tu negocio </p>
-                    <a href="#contacto" class="btn btn-primary">Migrar</a>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">🔒</div>
-                    <h3>Ciberseguridad</h3>
-                    <p>Protección integral de datos y sistemas con las mejores prácticas de seguridad informática.</p>
+                    <div class="service-icon custom">🔒</div>
+                    <h3>Seguridad de Aplicaciones y Testing</h3>
+                    <p>Auditorías de código, pentesting y aplicación de protocolos de ciberseguridad para proteger tus activos digitales.</p>
                     <a href="#contacto" class="btn btn-primary">Proteger</a>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">📊</div>
-                    <h3>Business Intelligence</h3>
-                    <p>Dashboards y análisis de datos para la toma de decisiones estratégicas basadas en información.
-                    </p>
-                    <a href="#contacto" class="btn btn-primary">Analizar</a>
+                    <div class="service-icon custom">📊</div>
+                    <h3>Data Engineering & BI</h3>
+                    <p>Integración de fuentes de datos, construcción de Data Warehouses y creación de Dashboards interactivos (Power BI, Tableau).</p>
+                    <a href="#contacto" class="btn btn-primary">Analizar Datos</a>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">🚀</div>
-                    <h3>Automatización</h3>
-                    <p>Implementación de procesos automatizados para aumentar la eficiencia y reducir costos operativos.
-                    </p>
+                    <div class="service-icon custom">🤖</div>
+                    <h3>Automatización de Procesos (RPA)</h3>
+                    <p>Implementación de robótica de procesos y APIs para eliminar tareas manuales repetitivas y aumentar la eficiencia operativa.</p>
                     <a href="#contacto" class="btn btn-primary">Automatizar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
     <section class="products" id="productos">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Nuestras plataformas de software</h2>
-                <p>Plataformas empresariales - Click para expandir</p>
+                <h2>Plataformas Empresariales Listas</h2>
+                <p>Soluciones pre-construidas, escalables y adaptables a las necesidades de sectores específicos.</p>
             </div>
 
             <div class="products-container">
-                <!-- ERP Empresarial 
-                <div class="product-item fade-in">
-                    <div class="product-header" onclick="toggleProduct(this)">
-                        <div class="product-title">
-                            <span class="product-icon">🏥</span>
-                            <h3 class="product-name">Plataforma medica </h3>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div class="product-price">Desde $10/mes</div>
-                            <span class="expand-icon">▼</span>
-                        </div>
-                    </div>
-                    <div class="product-content">
-                        <div class="product-body">
-                            <p class="product-description">
-                                Plataforma empresarial de gestión medica con un enfoque en la salud y la eficiencia.
-                            </p>
-                            <div class="product-features">
-                                <div class="feature-category">
-                                    <h4>📊 Gestión Medica</h4>
-                                    <ul class="feature-list">
-                                        <li>Perfil medico automatico(En un solo paso y sin complicaciones)</li>
-                                        <li>Contabilidad automatizada</li>
-                                        <li>Historial de pacientes</li>
-                                        <li>Generacion de citas en linea</li>
-                                        <li>Dasboard de tu empresa</li>
-
-                                    </ul>
-                                </div>
-                                <div class="feature-category">
-                                    <h4>🤒 Para paciente</h4>
-                                    <ul class="feature-list">
-                                        <li>Podras programar tus citas en linea</li>
-
-                                        <li>el link de reservas de cita llega automaticamente a tu correo</li>
-                                        <li>Podras revisar tu historial medico con un codigo unico</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-cta">
-                                <a href="#contacto" class="btn btn-primary">Adquirir Ahora</a>
-                                <a href="#contacto" class="btn btn-secondary">Solicitar Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                -->
-                <!-- ERP Imobiliario -->
                 <div class="product-item fade-in">
                     <div class="product-header" onclick="toggleProduct(this)">
                         <div class="product-title">
                             <span class="product-icon">🌆</span>
-                            <h3 class="product-name">Plataforma imobiliaria</h3>
+                            <h3 class="product-name">PropManager: Plataforma Inmobiliaria</h3>
                         </div>
                         <div style="display: flex; align-items: center; gap: 1rem;">
                             <div class="product-price">Desde $10/mes</div>
@@ -184,33 +127,32 @@
                     <div class="product-content">
                         <div class="product-body">
                             <p class="product-description">
-                                Plataforma gestión Imobiliaria con un enfoque en la eficiencia a la hora de administrar
-                                edificios y residencias.
+                                Plataforma de gestión integral con foco en la eficiencia administrativa de edificios, residencias y propiedades de alquiler.
                             </p>
                             <div class="product-features">
                                 <div class="feature-category">
-                                    <h4>📊 Gestión administrativa</h4>
+                                    <h4>📊 Gestión Propietario/Admin</h4>
                                     <ul class="feature-list">
                                         <li>Registro digital completo (incluyendo fotos) de tus propiedades</li>
-                                        <li>Modificacion de estados de tus propiedades</li>
-                                        <li>Gestion de inventario de inmuebles</li>
-                                        <li>Tus documentos a compartir con el inquilino en un solo lugar</li>
-                                        <li>Reportes automáticos personalizados</li>
-
+                                        <li>Modificación de estados y disponibilidad</li>
+                                        <li>Gestión de inventario de inmuebles y activos</li>
+                                        <li>Documentos en la nube para compartir fácilmente</li>
+                                        <li>Reportes automáticos personalizados (ocupación, rentabilidad)</li>
                                     </ul>
                                 </div>
                                 <div class="feature-category">
-                                    <h4>🫡Para el inquilino</h4>
+                                    <h4>🫡 Para el Inquilino (Portal Web)</h4>
                                     <ul class="feature-list">
-                                        <li>Acceso a documentos compartidos</li>
-                                        <li>Historial de pagos y mantenimientos</li>
-                                        <li>Recordatorios de mantenimientos/pagos</li>
+                                        <li>Acceso a documentos compartidos (contratos, reglamentos)</li>
+                                        <li>Historial de pagos y solicitudes de mantenimiento</li>
+                                        <li>Recordatorios de mantenimientos y fechas de pago</li>
+                                        <li>Comunicación directa con la administración</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="product-cta">
                                 <a href="#contacto" class="btn btn-primary">Adquirir Ahora</a>
-                                <a href="/PropManager" class="btn btn-secondary">Mas Informacion</a>
+                                <a href="/PropManager" class="btn btn-secondary">Mas Información</a>
                             </div>
                         </div>
                     </div>
@@ -219,7 +161,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -229,71 +170,66 @@
                 </div>
                 <div class="stat-item fade-in">
                     <h3 class="counter" data-target="300">0</h3>
-                    <p>Proyectos Completados</p>
+                    <p>Proyectos de Código</p>
                 </div>
                 <div class="stat-item fade-in">
-                    <h3 class="counter" data-target="5">0</h3>
-                    <p>Años de Experiencia</p>
+                    <h3 class="counter" data-target="98">0</h3>
+                    <p>Tasa de Retención (%)</p>
                 </div>
                 <div class="stat-item fade-in">
                     <h3 class="counter" data-target="10">0</h3>
-                    <p>Especialistas</p>
+                    <p>Especialistas Senior</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="fade-in">
-                <h2>¿Listo para Digitalizar tu Empresa?</h2>
-                <p>Únete a más de 50 empresas que ya transformaron sus procesos con nuestras soluciones</p>
+                <h2>¿Listo para la Evolución Digital?</h2>
+                <p>Agenda una consulta gratuita con nuestros arquitectos de software.</p>
                 <a href="http://wa.me/51939152728" target="_blank" class="btn btn-primary"
-                    style="font-size: 1.1rem; padding: 1.2rem 3rem;">Consulta
-                    Gratuita</a>
+                    style="font-size: 1.1rem; padding: 1.2rem 3rem;">Hablemos por WhatsApp</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contacto">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Gabware</h3>
-                    <p>Transformamos empresas a través de la tecnología, brindando soluciones innovadoras y consultoría
-                        especializada.</p>
+                    <p>Tu socio estratégico en desarrollo de software, consultoría y soluciones de automatización.</p>
                     <p><strong>📧 contacto@gabware.com</strong></p>
                     <p><strong>📞 +51 939152728 </strong></p>
                 </div>
                 <div class="footer-section">
-                    <h3>Servicios</h3>
-                    <a href="#servicios">Consultoría Empresarial</a>
-                    <a href="#servicios">Desarrollo de Software</a>
-                    <a href="#servicios">Migración a la Nube</a>
+                    <h3>Servicios Tech</h3>
+                    <a href="#servicios">Desarrollo a Medida</a>
+                    <a href="#servicios">Cloud & DevOps</a>
                     <a href="#servicios">Ciberseguridad</a>
+                    <a href="#servicios">Data & BI</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Productos</h3>
-                    <a href="#productos">Plataforma Medica</a>
+                    <h3>Plataformas</h3>
+                    <a href="#productos">PropManager (Inmobiliaria)</a>
+                    <a href="#productos">Gab-ERP (General)</a>
                 </div>
                 <div class="footer-section">
                     <h3>Empresa</h3>
                     <a href="#">Acerca de Nosotros</a>
-                    <a href="#">Casos de Éxito</a>
-                    <a href="#">Blog</a>
+                    <a href="clientes/">Casos de Éxito</a>
                     <a href="#">Careers</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Gabware. Todos los derechos reservados. | Diseñado para el futuro empresarial.</p>
+                <p>&copy; 2025 Gabware. Todos los derechos reservados. | Desarrollado con ❤️ en Latinoamérica.</p>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/index.js"></script>
-
 </body>
 
 </html>
