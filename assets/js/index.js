@@ -3,6 +3,7 @@
             const nav = document.getElementById('nav-container');
             const navLinks = document.getElementById('navLinks');
             nav.classList.toggle('nav-active');
+            navLinks.style.display = nav.classList.contains('nav-active') ? "flex" : "none";
         }
 
         // Función para el contador de estadísticas
