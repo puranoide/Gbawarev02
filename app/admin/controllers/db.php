@@ -1,20 +1,22 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gabware"; 
+$username = "u685818680_gabriel";
+$password = "1r=bU~jdtSW";
+$dbname = "u685818680_gabware"; 
 // Create connection
 /*
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "consultame"; 
+$dbname = "gabware"; 
 
 
 $servername = "localhost";
-$username = "u685818680_gabrieladmin02";
-$password = "7|Pvfsp~WjP";
-$dbname = "u685818680_consultamev2";*/
+$username = "u685818680_gabriel";
+$password = "1r=bU~jdtSW";
+$dbname = "u685818680_gabware"; 
+
+*/
 $conexion = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conexion->connect_error) {
